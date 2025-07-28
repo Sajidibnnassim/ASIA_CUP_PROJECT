@@ -1,0 +1,16 @@
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('MS Dhoni ', 'India', '2016-2016', 5, 5, 7, 6, 1, 3);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('SP Patil ', 'UAE', '2016-2016', 7, 7, 7, 6, 1, 2);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('LD Chandimal ', 'Sri Lanka', '2016-2016', 4, 3, 4, 4, 0, 2);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('Sultan Ahmed ', 'Oman', '2016-2016', 3, 3, 4, 2, 2, 3);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('KD Karthik ', 'India', '2022-2022', 3, 1, 3, 3, 0, 3);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('Nurul Hasan ', 'Bangladesh', '2016-2016', 2, 2, 3, 0, 3, 2);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('Mohammad Shahzad ', 'Afghanistan', '2016-2016', 3, 3, 3, 1, 2, 2);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('Rahmanullah Gurbaz ', 'Afghanistan', '2022-2022', 5, 5, 3, 3, 0, 2);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('BKG Mendis ', 'Sri Lanka', '2022-2022', 6, 6, 3, 3, 0, 2);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('Mohammad Rizwan ', 'Pakistan', '2022-2022', 6, 6, 3, 3, 0, 1);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('Sarfaraz Ahmed ', 'Pakistan', '2016-2016', 4, 4, 2, 2, 0, 2);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('Mushfiqur Rahim ', 'Bangladesh', '2016-2022', 7, 5, 2, 1, 1, 1);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('SS McKechnie ', 'Hong Kong', '2022-2022', 2, 2, 1, 1, 0, 1);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('N Dickwella ', 'Sri Lanka', '2016-2016', 1, 1, 0, 0, 0, 0);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('C Carter ', 'Hong Kong', '2016-2016', 3, 3, 0, 0, 0, 0);
+INSERT INTO wicketkeeper_data_t20i (Player_Name, Country, Time_Period, Matches, Played, Dismissals, Catches, Stumpings, Maximum_Dismissals) VALUES ('RR Pant ', 'India', '2022-2022', 4, 4, 0, 0, 0, 0);

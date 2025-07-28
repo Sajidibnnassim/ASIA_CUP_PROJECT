@@ -1,0 +1,144 @@
+----------------------1–5. Column Aliases----------------------
+1). SELECT Player AS Batsman, Runs AS Total_Runs FROM batsman_data_odi;
+
+2). SELECT Team AS Nation, Matches AS Total_Matches FROM bowler_data_t20i;
+
+3). SELECT Player AS Keeper, Stumpings AS Stumped_Opponents FROM wicketkeeper_data_odi;
+
+4). SELECT Year AS AsiaCup_Year, Host AS Country FROM asiacup;
+
+5). SELECT Winner AS Champion_Team FROM champion;
+
+
+----------------------6–10. Column Concatenation----------------------
+6). SELECT Player || ' - ' || Team AS Player_Info FROM batsman_data_odi;
+
+7). SELECT Team || ': ' || Runs || ' runs' AS Score_Info FROM batsman_data_t20i;
+
+8). SELECT Player || ' (' || Matches || ' matches)' AS Summary FROM bowler_data_odi;
+
+9). SELECT Player || ' [' || Catches || ' Catches]' AS Keeper_Stats FROM wicketkeeper_data_t20i;
+
+10). SELECT 'Asia Cup ' || Year || ' - ' || Host AS Tournament FROM asiacup;
+
+
+----------------------11–15. Column Calculations----------------------
+11). SELECT Player, Runs, Matches, ROUND(Runs / Matches, 2) AS Avg_Run_Per_Match FROM batsman_data_odi WHERE Matches > 0;
+
+12). SELECT Player, Catches + Stumpings AS Total_Dismissals FROM wicketkeeper_data_odi;
+
+13). SELECT Player, Economy * Overs AS Bowling_Impact FROM bowler_data_odi;
+
+14). SELECT Player, ROUND((Runs / BallsFaced) * 100, 2) AS Custom_StrikeRate FROM batsman_data_t20i WHERE BallsFaced > 0;
+
+15). SELECT Matches - (Catches + Stumpings) AS Other_Matches FROM wicketkeeper_data_t20i;
+
+
+----------------------16–20. DISTINCT----------------------
+16). SELECT DISTINCT Team FROM batsman_data_odi;
+
+17). SELECT DISTINCT Host FROM asiacup;
+
+18). SELECT DISTINCT Player FROM bowler_data_t20i;
+
+19). SELECT DISTINCT Year FROM champion;
+
+20). SELECT DISTINCT Winner FROM champion;
+
+
+----------------------21–25. IN / NOT IN----------------------
+21). SELECT Player, Team FROM batsman_data_t20i WHERE Team IN ('India', 'Pakistan');
+
+22). SELECT Player FROM bowler_data_odi WHERE Team NOT IN ('Sri Lanka', 'Afghanistan');
+
+23). SELECT Year FROM asiacup WHERE Host IN ('India', 'UAE');
+
+24). SELECT Player FROM wicketkeeper_data_t20i WHERE Team NOT IN ('Nepal');
+
+25). SELECT Player FROM batsman_data_odi WHERE Team IN ('Bangladesh', 'Afghanistan');
+
+
+----------------------26–30. AND / OR / NOT----------------------
+26). SELECT Player FROM batsman_data_odi WHERE Runs > 1000 AND Matches < 50;
+
+27). SELECT Player FROM bowler_data_t20i WHERE Wickets > 15 OR Economy < 6;
+
+28). SELECT Player FROM batsman_data_t20i WHERE NOT Runs > 500;
+
+29). SELECT Player FROM wicketkeeper_data_odi WHERE Catches > 10 OR Stumpings > 5;
+
+30). SELECT Player FROM bowler_data_odi WHERE NOT (Wickets < 10);
+
+
+----------------------31–35. IS NULL / IS NOT NULL----------------------
+31). SELECT Player FROM batsman_data_odi WHERE StrikeRate IS NULL;
+
+32). SELECT Player FROM batsman_data_odi WHERE StrikeRate IS NOT NULL;
+
+33). SELECT Player FROM wicketkeeper_data_t20i WHERE Catches IS NULL;
+
+34). SELECT Player FROM bowler_data_t20i WHERE Economy IS NOT NULL;
+
+35). SELECT Player FROM batsman_data_t20i WHERE BallsFaced IS NULL;
+
+
+----------------------36–40. LIKE----------------------
+36). SELECT Player FROM batsman_data_odi WHERE Player LIKE 'V%';
+
+37). SELECT Player FROM bowler_data_odi WHERE Player LIKE '%n';
+
+38). SELECT Player FROM wicketkeeper_data_odi WHERE Player LIKE '%Singh%';
+
+39). SELECT Player FROM batsman_data_t20i WHERE Player LIKE '% %'; -- Two-word names
+
+40). SELECT Player FROM bowler_data_t20i WHERE Player LIKE '__a%'; -- Third char is 'a'
+
+
+----------------------41–45. ORDER BY----------------------
+41). SELECT Player, Runs FROM batsman_data_odi ORDER BY Runs DESC;
+
+42). SELECT Player, Wickets FROM bowler_data_odi ORDER BY Wickets DESC, Economy ASC;
+
+43). SELECT Player, Matches FROM batsman_data_t20i ORDER BY Matches ASC;
+
+44). SELECT Team, Catches FROM wicketkeeper_data_odi ORDER BY Catches DESC;
+
+45). SELECT Host, Year FROM asiacup ORDER BY Year DESC;
+
+
+----------------------46–49. ROWNUM / ROWID----------------------
+46). SELECT ROWNUM, Player FROM batsman_data_odi WHERE ROWNUM <= 5;
+
+47). SELECT ROWNUM AS Serial, Player FROM bowler_data_t20i WHERE ROWNUM <= 3;
+
+48). SELECT ROWID, Player FROM batsman_data_odi;
+
+49). SELECT ROWNUM, Player, Team FROM wicketkeeper_data_t20i;
+
+ 
+----------------------50–55. DATE, TO_CHAR, DUAL----------------------
+50). SELECT SYSDATE AS Today FROM DUAL;
+
+51). SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD') AS Formatted_Date FROM DUAL;
+
+52). SELECT TO_CHAR(SYSDATE, 'Day') AS Weekday FROM DUAL;
+
+53). SELECT 'Asia Cup Practice' AS Label, TO_CHAR(SYSDATE + 10, 'DD-Mon-YYYY') AS Match_Date FROM DUAL;
+
+54). SELECT TO_CHAR(SYSDATE, 'YYYY') AS Current_Year FROM DUAL;
+
+55). SELECT TO_CHAR(SYSDATE, 'MON YYYY') AS Report_Month FROM DUAL;
+
+
+----------------------Bonus 56–60: Mixed Practical SELECTs----------------------
+56). SELECT Player || ' scored ' || Runs || ' runs' AS Report FROM batsman_data_odi WHERE Runs > 1000;
+
+57). SELECT Team, Player, Matches FROM bowler_data_odi WHERE Team IN ('India', 'Pakistan') AND Matches < 50;
+
+58). SELECT DISTINCT Player FROM wicketkeeper_data_t20i WHERE Catches IS NOT NULL ORDER BY Player;
+
+59). SELECT Player, TO_CHAR(SYSDATE, 'YYYY-MM-DD') AS Retrieved_On FROM batsman_data_t20i WHERE Runs > 500;
+
+60). SELECT ROWNUM AS Row_Serial, Player FROM batsman_data_odi WHERE ROWNUM <= 10;
+
+
